@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBite AI - Eat Smart, Live Better</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">SmartBite <span>AI</span></div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Landing Section -->
+        <section class="hero">
+            <h1>Eat Smart, <span class="highlight">Live Better</span></h1>
+            <p>Personalized food recommendations powered by intelligent insights, helping you achieve your fitness goals effortlessly.</p>
+            <a href="#form-section" class="btn-primary">Get Started</a>
+        </section>
+
+        <!-- Two Column Layout for the App -->
+        <div class="app-layout">
+            <!-- Left Column: Input Form -->
+            <section id="form-section" class="glass-card form-section">
+                <h2>Your Details</h2>
+                <form id="recommendation-form">
+                    <div class="form-group">
+                        <label for="fitness-goal">Fitness Goal</label>
+                        <select id="fitness-goal" required>
+                            <option value="">Select your goal...</option>
+                            <option value="weight-loss">Weight Loss</option>
+                            <option value="muscle-gain">Muscle Gain</option>
+                            <option value="maintain">Maintain</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diet-preference">Diet Preference</label>
+                        <select id="diet-preference" required>
+                            <option value="">Select your diet...</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="non-vegetarian">Non-Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meal-time">Time of Meal</label>
+                        <select id="meal-time" required>
+                            <option value="">Select time...</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snack">Snack</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-full">Get Recommendation</button>
+                </form>
+            </section>
+
+            <!-- Right Column: Output & Dashboard -->
+            <section class="dashboard-section">
+                <!-- Top Mini Dashboard Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <h3>Calories</h3>
+                        <div class="stat-value">1,240 <span class="stat-unit">/ 2,000</span></div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3>Meals Today</h3>
+                        <div class="stat-value">2</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <h3>Health Score</h3>
+                        <div class="stat-value highlight">92 <span class="stat-unit">/ 100</span></div>
+                    </div>
+                </div>
+
+                <!-- Daily Calorie Tracker -->
+                <div class="tracker-card glass-card">
+                    <div class="tracker-header">
+                        <h3>Daily Progress</h3>
+                        <span>62%</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: 62%;"></div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Output Box -->
+                <div id="output-section" class="output-card glass-card hidden">
+                    <div class="output-header">
+                        <h3>Recommended Meal</h3>
+                        <span id="output-calories" class="badge">0 kcal</span>
+                    </div>
+                    <h4 id="output-meal-name">Waiting for recommendation...</h4>
+                    <p id="output-description" class="text-muted">Fill out the form to get a personalized meal.</p>
+                    
+                    <div class="health-tip">
+                        <strong>Health Tip:</strong> <span id="output-tip">...</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
